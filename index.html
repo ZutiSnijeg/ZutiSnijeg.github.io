@@ -4,210 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WaterFox</title>
-    <link rel="icon" href="https://i.redd.it/h0jt8tkeraya1.png">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
-
-:root{
-    --content_height: 500px;
-    --content_width: 1000px;
-    --searchbarHeight: 50px;
-    --imgHeight: 175px;
-    --font-size: 24px;
-    --bg-color: #2b2a45;
-    --title-color: #5CD7F5;
-    --search-outline: #2BADD0;
-    --title-search-color: #6B6DE9;
-    --bg-gradient: radial-gradient(circle, rgba(43,42,69,1) 0%, rgba(30,22,65,1) 100%);
-}
-.wrapper{
-    width:100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Open Sans', sans-serif;
-    background: var(--bg-gradient)
-    
-}
-
-body{
-    margin: 0;
-    padding: 0;
-}
-.content{
-    height:var(--content_height);
-    width: var(--content_width);
-    display:flex;
-    flex-direction: column;
-    animation: load 1000ms ease-in-out 0ms;
-}
-
-.promo{
-    min-height:calc(var(--content_height) / 2);
-    width: 100%;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.searchbarWrapper{
-    width: 100%;
-    display: flex;
-    align-items:center;
-    justify-content: center;
-}
-
-.searchbar{
-    width: 100%;
-    height: calc(var(--searchbarHeight) * 1.15);
-    background-color: var(--title-color);
-    display: flex;
-    flex-direction: row;
-    border-radius: 30px;
-    justify-content: center;
-    align-items: center;
-    outline: var(--bg-color) 1px solid;
-
-}
-
-.searchbarInput{
-    height: var(--searchbarHeight);
-    flex: 1;
-    font-size: var(--font-size);
-    background-color: var(--title-color);
-    outline: none;
-    border: none;
-    margin-left: 15px;
-    border-right:1px solid var(--bg-color);
-
-}
-
-.enter{
-    height: var(--searchbarHeight);
-    aspect-ratio: 1;
-    border-radius: 50%;
-    cursor: pointer;
-    margin: 0 3px;
-}
-
-.promoImg{
-    height: var(--imgHeight);
-}
-
-.promoTextDiv{
-    height: var(--imgHeight);
-    width: calc(var(--content_width) - var(--imgHeight));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color:var(--title-color);
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.promo{
-    display: flex;
-    flex-direction:  row;
-    justify-content: center;
-    align-items: center;
-    height: var(--imgHeight);
-    width: var(--content_width);
-}
-
-.promoImgDiv{
-    height: var(--imgHeight);
-    width: var(--imgHeight);
-}
-
-.promoTextSpan {
-    font-size: var(--imgHeight);
-}    
-
-#enter-svg{
-    width: var(--searchbarHeight);
-    height: var(--searchbarHeight);
-    color: var(--bg-color);;
-
-}
-
-.searchbar:focus-within{
-    outline: 1px solid var(--search-outline);
-}
-
-
-.promoImg:hover {
-   transform: rotate(360deg);
-   animation: rotateFox 1000ms linear 0ms;
-   animation-iteration-count: infinite;
-
-}
-
-.content:focus-within .promoImg{
-    animation: searchRotation 1000ms linear 0ms;
-    animation-iteration-count: infinite;
-}
-
-.content:focus-within .promoTextSpan{
-    animation: titleColorSearch 500ms linear 0ms;
-    animation-fill-mode: forwards;
-}
-
-@keyframes load {
-    0%{
-        opacity: 0;
-    }
-
-    100%{
-        opacity: 1;
-    }
-}
-
-@keyFrames rotateFox {
-    0%{
-        transform: rotate(0deg);
-    }
-    25%{
-        transform: rotate(-75deg);
-    }
-    75%{
-        transform: rotate(75deg);
-    }
-    100%{
-        transform: rotate(0deg);
-    }
-}
-
-@keyFrames searchRotation {
-    0%{
-        transform: rotate(0deg);
-    }
-
-    100%{
-        transform: rotate(-360deg);
-    }
-}
-
-@keyframes titleColorSearch {
-    0%{
-        color: var(--title-color);
-    }
-    100%{
-        color: var(--title-search-color);
-    }
-}
-    </style>
-
-
+    <title>Document</title>
+    <link rel="stylesheet" href="waterfox.css">
 </head>
 <body>
     <div class="wrapper">
         <div class="content">
             <div class="promo">
                 <div class="promoImgDiv">
-                    <img src="https://i.redd.it/h0jt8tkeraya1.png" alt="" class="promoImg">
+                    <img src="waterfox.img-removebg-preview.png" alt="" class="promoImg">
                 </div>
                 <div class="promoTextDiv">
                     <span class="promoTextSpan">WaterFox</span>
@@ -215,7 +20,7 @@ body{
             </div>
             <div class="searchbarWrapper">
                 <div class="searchbar">
-                    <input autofocus type="text" class="searchbarInput" id = "searchInput">
+                    <input type="text" class="searchbarInput" id = "searchInput">
                     <div class="enter" onclick = "search()">
                         <svg id = "enter-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
@@ -224,5 +29,6 @@ body{
             </div>
         </div>
     </div>
+    <script src = "waterfox.js"></script>
 </body>
 </html>
