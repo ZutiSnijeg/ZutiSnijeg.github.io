@@ -18,8 +18,6 @@ document.getElementById("searchInput").addEventListener("keydown", e => {
     {
         window.open(sites[converted], "_self");
     }
-    console.log(converted);
-
 });
 
 document.getElementById("searchInput").value = "";
