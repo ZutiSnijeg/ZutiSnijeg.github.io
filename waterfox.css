@@ -28,6 +28,7 @@ body{
     margin: 0;
     padding: 0;
 }
+
 .content{
     height:var(--content_height);
     width: var(--content_width);
@@ -55,13 +56,10 @@ body{
 .searchbar{
     width: 100%;
     height: calc(var(--searchbarHeight) * 1.15);
-    background-color: var(--title-color);
     display: flex;
     flex-direction: row;
-    border-radius: 30px;
     justify-content: center;
-    align-items: center;
-    outline: var(--bg-color) 1px solid;
+    align-items: center;        
 
 }
 
@@ -73,16 +71,20 @@ body{
     outline: none;
     border: none;
     margin-left: 15px;
-    border-right:1px solid var(--bg-color);
+    background-color: var(--title-color);
+    border-radius: 20px;
+    padding: 5px 10px;
 
 }
 
 .enter{
     height: var(--searchbarHeight);
     aspect-ratio: 1;
-    border-radius: 50%;
+    border-radius: 20px;
     cursor: pointer;
-    margin: 0 3px;
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: var(--title-color);
 }
 
 .promoImg{
@@ -123,11 +125,6 @@ body{
     color: var(--bg-color);;
 
 }
-
-.searchbar:focus-within{
-    outline: 1px solid var(--search-outline);
-}
-
 
 .promoImg:hover {
    transform: rotate(360deg);
